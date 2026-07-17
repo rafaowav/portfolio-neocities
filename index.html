@@ -341,6 +341,15 @@ img{max-width:100%;display:block}
   transition:filter 0.3s;
 }
 .photo-grid img:hover{filter:grayscale(0)}
+.bio{
+  max-width:620px;margin:2rem auto 0;
+  text-align:center;
+}
+.bio p{
+  color:var(--text-secondary);
+  font-size:0.88rem;line-height:1.8;
+  margin-bottom:1rem;
+}
 @media(max-width:600px){
   .photo-grid{grid-template-columns:1fr}
 }
@@ -441,6 +450,7 @@ img{max-width:100%;display:block}
     <a href="#" class="logo">rafao</a>
     <nav>
       <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#lancamentos">Lançamentos</a></li>
         <li><a href="#discografia">Discografia</a></li>
         <li><a href="#collab">Colaborações</a></li>
@@ -469,6 +479,23 @@ img{max-width:100%;display:block}
         <a href="#collab" class="btn btn-outline">Colaborações</a>
         <a href="#alterego" class="btn btn-subtle">Alter Ego</a>
         <a href="#contato" class="btn btn-subtle">Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Sobre</p>
+      <h2 class="section-title">rafao</h2>
+      <div class="photo-grid">
+        <img src="rafao2.JPEG" alt="" loading="lazy" />
+        <img src="rafao3.JPEG" alt="" loading="lazy" />
+        <img src="rafao4.JPEG" alt="" loading="lazy" />
+      </div>
+      <div class="bio">
+        <p>rafao é um produtor musical, sound designer e engenheiro de áudio baseado em São Paulo, Brasil — embora atualmente resida no interior paulista. Desde 2018, vem construindo um universo sonoro próprio que transita entre o experimental e o acessível, com influências que vão do jungle ao ambient, do house ao downtempo.</p>
+        <p>Além de seus lançamentos autorais, trabalha como ghost producer, mixador e masterizador para artistas independentes e selos, colaborando com nomes como Matesu e DSPRS em compilações e projetos avulsos. Seu alter ego DJ Aurous explora vertentes mais dançantes e lo-fi dentro da cena eletrônica brasileira.</p>
+        <p>Cada faixa é pensada como uma paisagem — texturas, camadas, ruídos e melodias que convidam o ouvinte a uma imersão. Para rafao, fazer música é antes de tudo um exercício de pesquisa: de timbres, de emoções, de limites.</p>
       </div>
     </div>
   </section>
@@ -645,19 +672,6 @@ img{max-width:100%;display:block}
             <a href="https://bloodwormtrax.bandcamp.com/album/btx003-antologia" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block">Compilação completa</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="fotos" class="section">
-    <div class="container">
-      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Sobre</p>
-      <h2 class="section-title">rafao</h2>
-      <p class="section-subtitle">Produtor, sound designer, engenheiro de áudio. EST. 2018.</p>
-      <div class="photo-grid">
-        <img src="rafao2.JPEG" alt="" loading="lazy" />
-        <img src="rafao3.JPEG" alt="" loading="lazy" />
-        <img src="rafao4.JPEG" alt="" loading="lazy" />
       </div>
     </div>
   </section>
