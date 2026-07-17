@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rafao — produtor, sound designer & engenheiro de áudio</title>
+  <meta name="description" content="rafao — produção musical, mixagem, masterização, sound design e trilha sonora. São Paulo, BR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f5f4f0;
+  --bg-card:#efeee9;
+  --bg-elevated:#eae8e3;
+  --border:#d8d5ce;
+  --border-light:#e5e2db;
+  --text:#1a1a18;
+  --text-secondary:#5c5952;
+  --text-muted:#8a867e;
+  --accent:#3a3832;
+  --accent-hover:#2a2824;
+  --font-sans:'Space Grotesk',-apple-system,sans-serif;
+  --font-serif:'Space Grotesk',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--accent);color:#fff}
+.container{max-width:1080px;margin:0 auto;padding:0 2rem}
+.section{padding:6rem 0}
+.section-title{
+  font-family:var(--font-serif);
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  font-weight:400;
+  margin-bottom:0.5rem;
+  letter-spacing:-0.01em;
+}
+.section-subtitle{
+  color:var(--text-muted);
+  font-size:0.95rem;
+  font-weight:400;
+  margin-bottom:3rem;
+  max-width:500px;
+}
+
+/* ── Header ── */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.4rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all 0.35s ease;
+}
+.site-header.scrolled{
+  background:rgba(245,244,240,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border-light);
+  padding:0.8rem 2rem;
+}
+.site-header.hidden{transform:translateY(-100%)}
+.logo{font-size:1.15rem;font-weight:500;letter-spacing:-0.02em}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  font-size:0.82rem;font-weight:500;
+  color:var(--text-muted);
+  transition:color 0.25s;
+  text-transform:uppercase;letter-spacing:0.06em;
+}
+.nav-links a:hover{color:var(--text)}
+.menu-toggle{
+  display:none;flex-direction:column;gap:5px;
+  cursor:pointer;background:none;border:none;padding:4px;
+}
+.menu-toggle span{
+  display:block;width:22px;height:1.5px;
+  background:var(--text);transition:all 0.3s;
+}
+.menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle.active span:nth-child(2){opacity:0}
+.menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ── Hero ── */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+}
+.hero-bg img{
+  width:100%;height:100%;
+  object-fit:cover;
+  filter:grayscale(1) brightness(1.6) contrast(0.8);
+  opacity:0.3;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(245,244,240,0.3) 0%, rgba(245,244,240,0.92) 70%, var(--bg) 100%);
+}
+.hero-content{
+  position:relative;z-index:1;
+  text-align:center;padding:2rem;
+  max-width:700px;
+}
+.hero-tag{
+  font-size:0.75rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:0.15em;color:var(--text-muted);
+  margin-bottom:1.5rem;
+}
+.hero h1{
+  font-family:var(--font-serif);
+  font-size:clamp(3.5rem,12vw,7rem);
+  font-weight:400;
+  letter-spacing:-0.03em;
+  line-height:1;
+  margin-bottom:1.2rem;
+}
+.hero-sub{
+  font-size:clamp(0.95rem,1.5vw,1.1rem);
+  color:var(--text-secondary);
+  margin-bottom:0.3rem;
+  font-weight:300;
+}
+.hero-location{
+  font-size:0.8rem;color:var(--text-muted);
+  margin-bottom:2.5rem;
+}
+.hero-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  padding:0.7rem 1.8rem;
+  font-size:0.8rem;font-weight:500;
+  border-radius:0;
+  transition:all 0.25s;
+  cursor:pointer;border:none;
+  font-family:var(--font-sans);
+  text-transform:uppercase;letter-spacing:0.06em;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.btn-outline{
+  background:transparent;color:var(--text);
+  border:1px solid var(--border);
+}
+.btn-outline:hover{border-color:var(--accent);background:var(--bg-card)}
+.btn-subtle{
+  background:transparent;color:var(--text-muted);
+  border:1px solid var(--border-light);
+}
+.btn-subtle:hover{color:var(--text);border-color:var(--border)}
+
+/* ── Latest ── */
+.latest-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+}
+.latest-card{
+  background:var(--bg-card);
+  border:1px solid var(--border-light);
+  padding:1.5rem;
+  transition:border-color 0.25s;
+}
+.latest-card:hover{border-color:var(--border)}
+.latest-card iframe{
+  width:100%;height:120px;
+  border:none;display:block;
+  margin-bottom:1rem;
+}
+.latest-card h3{
+  font-size:0.95rem;font-weight:500;
+  margin-bottom:0.2rem;
+}
+.latest-card .meta{
+  font-size:0.78rem;color:var(--text-muted);
+  display:flex;gap:0.75rem;
+}
+.latest-card .latest-info{
+  display:flex;align-items:center;gap:0.75rem;
+}
+.latest-card .latest-thumb{
+  width:48px;height:48px;object-fit:cover;
+  border:1px solid var(--border-light);flex-shrink:0;
+}
+.new-badge{
+  display:inline-block;
+  font-size:0.6rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.08em;
+  padding:0.15rem 0.5rem;
+  background:var(--accent);color:#fff;
+  margin-left:0.5rem;
+  vertical-align:middle;
+}
+
+/* ── Discography Grid ── */
+.disco-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:1.5rem;
+}
+.disco-card{
+  background:var(--bg-card);
+  border:1px solid var(--border-light);
+  transition:all 0.25s;
+}
+.disco-card:hover{
+  border-color:var(--border);
+  background:var(--bg-elevated);
+}
+.disco-card .art{
+  aspect-ratio:1;overflow:hidden;
+}
+.disco-card .art img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 0.4s ease;
+  filter:grayscale(0.1);
+}
+.disco-card:hover .art img{transform:scale(1.03)}
+.disco-card .info{
+  padding:0.75rem 1rem 1rem;
+}
+.disco-card .info h3{
+  font-size:0.85rem;font-weight:500;
+  line-height:1.3;margin-bottom:0.15rem;
+}
+.disco-card .info .meta{
+  font-size:0.72rem;color:var(--text-muted);
+  display:flex;justify-content:space-between;
+}
+
+/* ── Collab Section ── */
+.collab-section{
+  background:var(--bg-card);
+  border-top:1px solid var(--border-light);
+  border-bottom:1px solid var(--border-light);
+}
+.collab-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+.collab-content{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+}
+.collab-content .art img{
+  width:100%;aspect-ratio:1;object-fit:cover;
+  border:1px solid var(--border-light);
+}
+.collab-content h3{
+  font-size:1.4rem;font-weight:500;
+  margin-bottom:0.5rem;
+}
+.collab-content p{
+  color:var(--text-secondary);
+  font-size:0.85rem;
+  line-height:1.6;
+  margin-bottom:0.75rem;
+}
+.collab-content .tags{
+  display:flex;flex-wrap:wrap;gap:0.4rem;
+  margin-bottom:0.5rem;
+}
+.collab-content .tags span{
+  font-size:0.65rem;padding:0.2rem 0.5rem;
+  border:1px solid var(--border-light);
+  color:var(--text-muted);
+}
+.collab-content iframe{
+  width:100%;height:120px;
+  border:none;display:block;
+}
+
+/* ── Alter Ego ── */
+.alter-ego-section{
+  text-align:center;
+  padding:5rem 2rem;
+  border-top:1px solid var(--border-light);
+}
+.alter-ego-section>p{
+  color:var(--text-muted);
+  font-size:0.85rem;
+  margin-bottom:0.75rem;
+  text-transform:uppercase;letter-spacing:0.1em;
+}
+.alter-ego-section>a{
+  font-size:1.8rem;font-weight:500;
+  transition:opacity 0.25s;
+}
+.alter-ego-section>a:hover{opacity:0.6}
+.ae-links{
+  display:flex;justify-content:center;gap:3rem;
+  margin-top:1.5rem;
+  flex-wrap:wrap;
+}
+.ae-item{
+  max-width:320px;
+}
+.ae-link-item{
+  display:flex;align-items:center;gap:0.75rem;
+  text-decoration:none;
+  transition:opacity 0.25s;
+}
+.ae-link-item:hover{opacity:0.7}
+.ae-link-item img{
+  width:48px;height:48px;object-fit:cover;
+  border:1px solid var(--border-light);
+}
+.ae-link-item span{
+  font-size:0.85rem;font-weight:500;
+}
+.ae-desc{
+  font-size:0.78rem;color:var(--text-secondary);
+  line-height:1.6;margin-top:0.6rem;text-align:left;
+}
+
+/* ── Services ── */
+.services-grid{
+  display:flex;flex-wrap:wrap;gap:0.6rem;
+}
+.services-grid span{
+  padding:0.5rem 1.2rem;
+  border:1px solid var(--border-light);
+  font-size:0.85rem;
+  color:var(--text-secondary);
+  transition:all 0.2s;
+}
+.services-grid span:hover{
+  border-color:var(--border);color:var(--text);
+  background:var(--bg-card);
+}
+.est{
+  color:var(--text-muted);
+  font-size:0.75rem;
+  margin-top:2rem;
+  letter-spacing:0.08em;
+}
+
+/* ── Social ── */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:0.5rem;
+}
+.social-card{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.85rem 1.2rem;
+  border:1px solid var(--border-light);
+  transition:all 0.2s;
+  font-size:0.85rem;
+}
+.social-card:hover{
+  border-color:var(--border);
+  background:var(--bg-card);
+}
+.social-card i{
+  width:1.1rem;text-align:center;
+  font-size:0.95rem;
+  color:var(--text-muted);
+}
+
+/* ── Footer ── */
+.site-footer{
+  padding:2.5rem 2rem;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:0.78rem;
+  border-top:1px solid var(--border-light);
+}
+
+/* ── Responsivo ── */
+@media(max-width:900px){
+  .collab-grid{grid-template-columns:1fr;gap:2rem}
+  .section{padding:4rem 0}
+}
+@media(max-width:768px){
+  .site-header{padding:1rem 1.5rem}
+  .site-header.scrolled{padding:0.7rem 1.5rem}
+  .nav-links{
+    position:fixed;top:0;right:-100%;
+    width:70%;height:100vh;
+    background:rgba(245,244,240,0.98);
+    backdrop-filter:blur(20px);
+    flex-direction:column;justify-content:center;align-items:center;
+    gap:2.5rem;
+    transition:right 0.35s ease;
+    border-left:1px solid var(--border);
+  }
+  .nav-links.open{right:0}
+  .nav-links a{font-size:0.95rem}
+  .menu-toggle{display:flex;z-index:101}
+  .no-scroll{overflow:hidden}
+  .disco-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+  .social-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .container{padding:0 1.2rem}
+  .section{padding:3rem 0}
+  .hero-actions{flex-direction:column;align-items:center}
+  .hero-actions .btn{width:100%;max-width:260px;text-align:center}
+  .disco-grid{grid-template-columns:repeat(2,1fr);gap:0.75rem}
+  .disco-card .info{padding:0.5rem 0.65rem 0.75rem}
+  .disco-card .info h3{font-size:0.78rem}
+}
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#" class="logo">rafao</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#lancamentos">Novos</a></li>
+        <li><a href="#discografia">Discografia</a></li>
+        <li><a href="#collab">Colaborações</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="rafitos.JPEG" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">São Paulo, BR</p>
+      <h1>rafao</h1>
+      <p class="hero-sub">produtor &bull; sound designer &bull; engenheiro de áudio</p>
+      <p class="hero-location">EST. 2018</p>
+      <div class="hero-actions">
+        <a href="#lancamentos" class="btn btn-primary">Lançamentos</a>
+        <a href="#discografia" class="btn btn-outline">Discografia</a>
+        <a href="#contato" class="btn btn-subtle">Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="lancamentos" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Novos Lançamentos</p>
+      <h2 class="section-title">Últimos lançamentos</h2>
+      <p class="section-subtitle">As faixas e álbuns mais recentes.</p>
+      <div class="latest-grid">
+        <div class="latest-card">
+          <iframe src="https://bandcamp.com/EmbeddedPlayer/transparent=true/track=1144002763/size=large/artwork=small/bgcol=efeee9/linkcol=3a3832/tracklist=false/transparent=true/" seamless></iframe>
+          <div class="latest-info">
+            <img src="https://f4.bcbits.com/img/a3227386020_7.jpg" alt="" class="latest-thumb" />
+            <div>
+              <h3>Anterograda <span class="new-badge">Novo</span></h3>
+              <p class="meta"><span>c/ Matesu</span><span>Jul 2026</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="latest-card">
+          <iframe src="https://bandcamp.com/EmbeddedPlayer/transparent=true/track=3218136689/size=large/artwork=small/bgcol=efeee9/linkcol=3a3832/tracklist=false/transparent=true/" seamless></iframe>
+          <div class="latest-info">
+            <img src="https://f4.bcbits.com/img/a0134367948_7.jpg" alt="" class="latest-thumb" />
+            <div>
+              <h3>Monotonia</h3>
+              <p class="meta"><span>DSPRS, rafao</span><span>Jul 2026</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="latest-card">
+          <iframe src="https://bandcamp.com/EmbeddedPlayer/transparent=true/album=2647524381/size=large/artwork=small/bgcol=efeee9/linkcol=3a3832/tracklist=false/transparent=true/" seamless></iframe>
+          <div class="latest-info">
+            <img src="https://f4.bcbits.com/img/a2753400803_7.jpg" alt="" class="latest-thumb" />
+            <div>
+              <h3>Jungle Research Vol. 1</h3>
+              <p class="meta"><span>Álbum</span><span>Mai 2025</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="discografia" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Catálogo</p>
+      <h2 class="section-title">Discografia</h2>
+      <p class="section-subtitle">Todas as obras lancadas no Bandcamp.</p>
+      <div class="disco-grid">
+        <a href="https://rafao.bandcamp.com/track/monotonia" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a0134367948_2.jpg" alt="Monotonia" loading="lazy" /></div>
+          <div class="info">
+            <h3>Monotonia</h3>
+            <p class="meta"><span>Single</span><span>2026</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/jungle-research-vol-1" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a2753400803_2.jpg" alt="Jungle Research Vol. 1" loading="lazy" /></div>
+          <div class="info">
+            <h3>Jungle Research Vol. 1</h3>
+            <p class="meta"><span>Álbum</span><span>2025</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/track/instant-reaction" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a1899353066_2.jpg" alt="Instant Reaction" loading="lazy" /></div>
+          <div class="info">
+            <h3>Instant Reaction</h3>
+            <p class="meta"><span>Single</span><span>2025</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/surplus-fruit-jumble" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a2481443267_2.jpg" alt="Surplus Fruit Jumble" loading="lazy" /></div>
+          <div class="info">
+            <h3>Surplus Fruit Jumble</h3>
+            <p class="meta"><span>Álbum</span><span>2025</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/track/sentido-reverso" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a2572877067_2.jpg" alt="Sentido Reverso" loading="lazy" /></div>
+          <div class="info">
+            <h3>Sentido Reverso</h3>
+            <p class="meta"><span>Single</span><span>2024</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/track/n-o-se-assusta" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a1517062388_2.jpg" alt="Não Se Assusta" loading="lazy" /></div>
+          <div class="info">
+            <h3>Não Se Assusta</h3>
+            <p class="meta"><span>Single</span><span>2024</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/handpicked-strange-tracks-vol-2" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a3307381697_2.jpg" alt="Handpicked Strange Tracks Vol. 2" loading="lazy" /></div>
+          <div class="info">
+            <h3>Handpicked Strange Tracks Vol. 2</h3>
+            <p class="meta"><span>Álbum</span><span>2023</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/m-sicas-para-sair-do-trabalho" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a3583265571_2.jpg" alt="Músicas Para Sair do Trabalho" loading="lazy" /></div>
+          <div class="info">
+            <h3>Músicas Para Sair do Trabalho</h3>
+            <p class="meta"><span>Álbum</span><span>2023</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/track/100-carinho" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a1838874695_2.jpg" alt="100 Carinho" loading="lazy" /></div>
+          <div class="info">
+            <h3>100 Carinho</h3>
+            <p class="meta"><span>Single</span><span>2023</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/oi" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a2780093779_2.jpg" alt="Oi." loading="lazy" /></div>
+          <div class="info">
+            <h3>Oi.</h3>
+            <p class="meta"><span>Álbum</span><span>2023</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/mended-atmosphere" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a1332673021_2.jpg" alt="Mended Atmosphere" loading="lazy" /></div>
+          <div class="info">
+            <h3>Mended Atmosphere</h3>
+            <p class="meta"><span>Álbum</span><span>2022</span></p>
+          </div>
+        </a>
+        <a href="https://bloodwormtrax.bandcamp.com/track/anter-grada" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a3227386020_2.jpg" alt="Anterograda" loading="lazy" /></div>
+          <div class="info">
+            <h3>Anterograda</h3>
+            <p class="meta"><span>c/ Matesu</span><span>2026</span></p>
+          </div>
+        </a>
+        <a href="https://rafao.bandcamp.com/album/handpicked-strange-tracks-vol-1" target="_blank" rel="noopener" class="disco-card">
+          <div class="art"><img src="https://f4.bcbits.com/img/a3940742282_2.jpg" alt="Handpicked Strange Tracks Vol. 1" loading="lazy" /></div>
+          <div class="info">
+            <h3>Handpicked Strange Tracks Vol. 1</h3>
+            <p class="meta"><span>Álbum</span><span>2020</span></p>
+          </div>
+        </a>
+      </div>
+      <div style="margin-top:2rem;text-align:center">
+        <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener" class="btn btn-outline">Ver tudo no Bandcamp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="collab" class="collab-section section">
+    <div class="container">
+      <p style="text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600;color:var(--text-muted);margin-bottom:2rem">— Colaborações</p>
+      <div class="collab-grid">
+        <div class="collab-content">
+          <div class="art">
+            <img src="https://f4.bcbits.com/img/a2314791318_2.jpg" alt="Kaki Pomme" loading="lazy" />
+          </div>
+          <div>
+            <h3>Kaki Pomme <span style="font-weight:300;color:var(--text-muted)">(DPS001)</span></h3>
+            <p>Coletânea de estreia do selo <strong>Dióspiros</strong>, 19 artistas em 18 faixas. rafao contribuiu com <em>"Monotonia"</em>.</p>
+            <div class="tags"><span>Dióspiros</span><span>Jun 2026</span></div>
+            <iframe src="https://bandcamp.com/EmbeddedPlayer/transparent=true/album=3279557355/size=large/artwork=small/bgcol=efeee9/linkcol=3a3832/tracklist=false/transparent=true/" seamless></iframe>
+            <a href="https://diospiros.bandcamp.com/album/dps001-kaki-pomme" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block">Coletânea completa</a>
+          </div>
+        </div>
+        <div class="collab-content">
+          <div class="art">
+            <img src="https://f4.bcbits.com/img/a3227386020_2.jpg" alt="Antologia" loading="lazy" />
+          </div>
+          <div>
+            <h3>Anterograda <span style="font-weight:300;color:var(--text-muted)">(bTx003)</span></h3>
+            <p>Faixa na compilação <strong>Antologia</strong> do selo <strong>Bloodworm Trax</strong>, por <strong>Matesu</strong> com participação de rafao. Uma imersão de 6 minutos em texturas degradadas e nostalgia sônica.</p>
+            <div class="tags"><span>Bloodworm Trax</span><span>Jul 2026</span></div>
+            <iframe src="https://bandcamp.com/EmbeddedPlayer/transparent=true/track=1144002763/size=large/artwork=small/bgcol=efeee9/linkcol=3a3832/tracklist=false/transparent=true/" seamless></iframe>
+            <a href="https://bloodwormtrax.bandcamp.com/album/btx003-antologia" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block">Compilação completa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Serviços</p>
+      <h2 class="section-title">O que eu faço</h2>
+      <p class="section-subtitle">Produção musical, sound design e engenharia de áudio para artistas, selos e marcas.</p>
+      <div class="services-grid">
+        <span>Produção Musical</span>
+        <span>Trilha Sonora</span>
+        <span>Mixagem</span>
+        <span>Masterização</span>
+        <span>Ghost Producing</span>
+        <span>Sound Design</span>
+        <span>Beatmaking</span>
+        <span>Instrumental</span>
+        <span>Edição de Áudio</span>
+      </div>
+      <p class="est">EST. 2018 / SÃO PAULO, BR</p>
+    </div>
+  </section>
+
+  <div class="alter-ego-section">
+    <p>Alter ego</p>
+    <a href="https://djaurous.bandcamp.com" target="_blank" rel="noopener">DJ Aurous</a>
+    <div class="ae-links">
+      <div class="ae-item">
+        <a href="https://bloodwormtrax.bandcamp.com/album/btx001-lagerhaus-i" target="_blank" rel="noopener" class="ae-link-item">
+          <img src="https://f4.bcbits.com/img/a2572503252_2.jpg" alt="Lagerhaus I" loading="lazy" />
+          <span>Lagerhaus I</span>
+        </a>
+        <p class="ae-desc"><strong>[bTx001]</strong> Lançamento inaugural do selo Bloodworm Trax. DJ Aurous e DJ Cybershot colaboram em 9 faixas que capturam a estética sonora do início dos anos 90, com graves saturados e agudos comprimidos — uma versão insalubre da House music diretamente do Sul Global.</p>
+      </div>
+      <div class="ae-item">
+        <a href="https://djaurous.bandcamp.com/track/boost-shuffle" target="_blank" rel="noopener" class="ae-link-item">
+          <img src="https://f4.bcbits.com/img/a2259107752_2.jpg" alt="Boost Shuffle" loading="lazy" />
+          <span>Boost Shuffle</span>
+        </a>
+        <p class="ae-desc"><strong>Boost Shuffle</strong> Faixa avulsa de DJ Aurous, mergulhando em texturas house etéreas com influências de UK garage e experimentalismo lo-fi.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Redes</p>
+      <h2 class="section-title">Contato &amp; Links</h2>
+      <p class="section-subtitle">Ouça, siga e entre em contato.</p>
+      <div class="social-grid">
+        <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener" class="social-card">
+          <i class="fab fa-bandcamp"></i> Bandcamp
+        </a>
+        <a href="https://soundcloud.com/rafaowav" target="_blank" rel="noopener" class="social-card">
+          <i class="fab fa-soundcloud"></i> SoundCloud
+        </a>
+        <a href="https://www.instagram.com/rafao_wav/" target="_blank" rel="noopener" class="social-card">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/rafao_wav" target="_blank" rel="noopener" class="social-card">
+          <i class="fab fa-x-twitter"></i> X / Twitter
+        </a>
+        <a href="https://www.ninaprotocol.com/profiles/rafao" target="_blank" rel="noopener" class="social-card">
+          <i class="fas fa-record-vinyl"></i> Nina Protocol
+        </a>
+        <a href="https://wa.me/+5512992413518?text=ol%C3%A1!!%20vamos%20trabalhar!?" target="_blank" rel="noopener" class="social-card">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+      </div>
+      <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-secondary)">disponível para colaborações e novos projetos</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 rafao &mdash; sonic adventurer</p>
+  </footer>
+
+  <script>
+  const header = document.querySelector('.site-header');
+  let last = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.pageYOffset;
+    header.classList.toggle('scrolled', y > 80);
+    header.classList.toggle('hidden', y > last && y > 200);
+    last = y;
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.nav-links').classList.toggle('open');
+    document.body.classList.toggle('no-scroll');
+  });
+  </script>
+
+</body>
+</html>
