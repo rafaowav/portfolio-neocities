@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rafao — produtor, sound designer & engenheiro de áudio</title>
+  <title>rafao hub</title>
   <meta name="description" content="rafao — produção musical, mixagem, masterização, sound design e trilha sonora. São Paulo, BR." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -326,6 +326,25 @@ img{max-width:100%;display:block}
   line-height:1.6;margin-top:0.6rem;text-align:left;
 }
 
+/* ── Photos ── */
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  max-width:700px;
+  margin:2rem auto 0;
+}
+.photo-grid img{
+  width:100%;aspect-ratio:1;object-fit:cover;
+  border:1px solid var(--border-light);
+  filter:grayscale(0.3);
+  transition:filter 0.3s;
+}
+.photo-grid img:hover{filter:grayscale(0)}
+@media(max-width:600px){
+  .photo-grid{grid-template-columns:1fr}
+}
+
 /* ── Services ── */
 .services-grid{
   display:flex;flex-wrap:wrap;gap:0.6rem;
@@ -626,6 +645,19 @@ img{max-width:100%;display:block}
             <a href="https://bloodwormtrax.bandcamp.com/album/btx003-antologia" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block">Compilação completa</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fotos" class="section">
+    <div class="container">
+      <p class="section-subtitle" style="margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;font-weight:600">— Sobre</p>
+      <h2 class="section-title">rafao</h2>
+      <p class="section-subtitle">Produtor, sound designer, engenheiro de áudio. EST. 2018.</p>
+      <div class="photo-grid">
+        <img src="rafao2.JPEG" alt="" loading="lazy" />
+        <img src="rafao3.JPEG" alt="" loading="lazy" />
+        <img src="rafao4.JPEG" alt="" loading="lazy" />
       </div>
     </div>
   </section>
