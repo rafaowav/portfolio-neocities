@@ -5,68 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rafao — synths</title>
   <meta name="description" content="rafao — projetos de programação e áudio: Opcoda e MiniSynth32." />
-  <meta name="theme-color" content="#07070b" />
+  <meta name="theme-color" content="#0a0a0b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307070b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f1efe9' stroke-width='2'/%3E%3C/svg%3E" />
 </head>
 <body>
 
 <a class="skip" href="#conteudo">pular para o conteúdo</a>
 
-<header class="site-header">
-  <div class="page">
-    <a href="index.html#topo" class="brand">rafao</a>
-    <nav class="nav" id="nav" aria-label="Navegação principal">
-      <a href="index.html#sobre">Sobre</a>
-      <a href="index.html#lancamentos">Lançamentos</a>
-      <a href="index.html#discografia">Catálogo</a>
-      <a href="index.html#colaboracoes">Colaborações</a>
-      <a href="index.html#selo">Selo</a>
-      <a href="synths.html" class="active" aria-current="page">Synths</a>
-    </nav>
-    <a href="index.html#contato" class="nav-cta">contato ↗</a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
-    </button>
+<aside class="rail">
+  <a class="rail-brand" href="index.html">rafao</a>
+  <nav class="rail-nav" aria-label="Seções">
+    <a href="index.html"><span class="n">00</span>Início</a>
+    <a href="perfil.html"><span class="n">01</span>Perfil</a>
+    <a href="lancamentos.html"><span class="n">02</span>Lançamentos</a>
+    <a href="catalogo.html"><span class="n">03</span>Catálogo</a>
+    <a href="colaboracoes.html"><span class="n">04</span>Colaborações</a>
+    <a href="selo.html"><span class="n">05</span>Selo</a>
+    <a href="contato.html"><span class="n">06</span>Contato</a>
+    <a href="synths.html" class="active" aria-current="page"><span class="n">07</span>Synths</a>
+  </nav>
+  <div class="rail-foot">
+    <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp ↗</a>
+    <a href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">bloodworm trax ↗</a>
   </div>
-</header>
+</aside>
 
-<main id="conteudo">
+<main id="conteudo" class="main">
 
-  <!-- ── hero ── -->
   <section class="syn-hero">
-    <div class="page">
-      <h1 class="syn-title">synths</h1>
-
-      <div class="syn-intro">
-        <p class="syn-lead">Projetos de programação e áudio: Opcoda e MiniSynth32.</p>
-      </div>
+    <div class="syn-hero-bg" aria-hidden="true">
+      <img src="rafitos.JPEG" alt="" />
+    </div>
+    <div class="wrap">
+      <span class="eyebrow">07</span>
+      <h1>synths</h1>
+      <p>Projetos de programação e áudio: Opcoda e MiniSynth32.</p>
     </div>
   </section>
 
-  <!-- ── 01 opcoda ── -->
-  <section class="section" id="opcoda">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">01</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Opcoda</h2>
-        </div>
-      </div>
-
-      <article class="proj">
-        <figure class="proj-media reveal">
-          <div class="shot">
-            <img src="img/opcoda-ui.png" alt="Interface do Opcoda mostrando a forma de onda de um binário PE, controles de grão e teclado" loading="lazy" />
-          </div>
+  <section class="section">
+    <div class="wrap">
+      <article class="project reveal">
+        <figure class="project-visual">
+          <img src="img/opcoda-ui.png" alt="Interface do Opcoda mostrando a forma de onda de um binário PE, controles de grão e teclado" loading="lazy" />
         </figure>
 
-        <div class="proj-info reveal">
-          <p class="proj-desc">O Opcoda lê executáveis do Windows (arquivos PE), corta os bytes em grãos e usa isso como fonte de som. A tela mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
-          <p class="proj-desc">É databending em formato de plugin. Versão 0.1.0, Windows x64.</p>
+        <div>
+          <h2>Opcoda</h2>
+          <p>O Opcoda lê executáveis do Windows (arquivos PE), corta os bytes em grãos e usa isso como fonte de som. A tela mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
+          <p>Databending em formato de plugin. Versão 0.1.0, Windows x64.</p>
 
           <dl class="spec">
             <div><dt>formato</dt><dd>VST3 + standalone</dd></div>
@@ -74,8 +65,6 @@
             <div><dt>stack</dt><dd>C++20 · JUCE 8</dd></div>
             <div><dt>versão</dt><dd>0.1.0</dd></div>
           </dl>
-
-          <div class="tags"><span>granular</span><span>databending</span><span>vst3</span><span>juce</span></div>
 
           <div class="proj-links">
             <a class="tlink" href="https://github.com/9matesu/Opcoda" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
@@ -85,18 +74,10 @@
     </div>
   </section>
 
-  <!-- ── 02 minisynth32 ── -->
-  <section class="section" id="minisynth">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">02</span>
-        <div class="sec-body">
-          <h2 class="sec-title">MiniSynth32</h2>
-        </div>
-      </div>
-
-      <article class="proj">
-        <figure class="proj-media reveal">
+  <section class="section">
+    <div class="wrap">
+      <article class="project reveal">
+        <figure class="project-visual">
           <div class="chain">
             <div class="chain-row">
               <span class="chain-node">ESP32-S3</span>
@@ -112,13 +93,13 @@
               <span class="chain-link">p2 3,5 mm</span>
               <span class="chain-node">saída estéreo</span>
             </div>
-            <p class="chain-cap">áudio no firmware, controle na web</p>
           </div>
         </figure>
 
-        <div class="proj-info reveal">
-          <p class="proj-desc">O firmware roda no <strong>ESP32-S3</strong> e gera o áudio. O DAC <strong>PCM5102A</strong> converte para a saída P2, um servidor Node recebe os dados por serial e repassa para a interface React por WebSocket. Os presets ficam em SQLite.</p>
-          <p class="proj-desc">Trabalho de curricularização do curso de Análise e Desenvolvimento de Sistemas da <strong>FATEC Cruzeiro</strong>, feito para o <strong>Acelera 01/2026</strong>.</p>
+        <div>
+          <h2>MiniSynth32</h2>
+          <p>O firmware roda no ESP32-S3 e gera o áudio. O DAC PCM5102A converte para a saída P2, um servidor Node recebe os dados por serial e repassa para a interface React por WebSocket. Os presets ficam em SQLite.</p>
+          <p>Trabalho de curricularização do curso de Análise e Desenvolvimento de Sistemas da FATEC Cruzeiro, feito para o Acelera 01/2026.</p>
 
           <dl class="spec">
             <div><dt>mcu</dt><dd>ESP32-S3</dd></div>
@@ -129,8 +110,6 @@
             <div><dt>contexto</dt><dd>FATEC Cruzeiro · Acelera 01/2026</dd></div>
           </dl>
 
-          <div class="tags"><span>esp32</span><span>síntese subtrativa</span><span>react</span><span>websocket</span></div>
-
           <div class="proj-links">
             <a class="tlink" href="https://github.com/9matesu/minisynth32" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
           </div>
@@ -139,43 +118,28 @@
     </div>
   </section>
 
-  <!-- ── 03 repositórios ── -->
-  <section class="section" id="repos">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">03</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Repositórios</h2>
-        </div>
-      </div>
-
-      <div class="sec-intro reveal">
-        <p>Código dos dois projetos no GitHub.</p>
-      </div>
-
-      <div class="proj-jump reveal">
+  <section class="section section-tight">
+    <div class="wrap">
+      <div class="repos reveal">
         <a class="tlink" href="https://github.com/9matesu/Opcoda" target="_blank" rel="noopener">opcoda no github <span class="arw">↗</span></a>
         <a class="tlink" href="https://github.com/9matesu/minisynth32" target="_blank" rel="noopener">minisynth32 no github <span class="arw">↗</span></a>
-        <a class="tlink" href="index.html#discografia">voltar ao catálogo <span class="arw">↗</span></a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="page">
+<footer class="footer">
+  <div class="wrap">
     <span class="f-brand">rafao</span>
     <div class="f-links">
       <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp</a>
       <a href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">spotify</a>
       <a href="https://soundcloud.com/rafaowav" target="_blank" rel="noopener">soundcloud</a>
-      <a href="index.html">portfólio</a>
+      <a href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">bloodworm trax</a>
     </div>
   </div>
 </footer>
-
-<div class="page-cursor" aria-hidden="true"></div>
 
 <script src="js/main.js" defer></script>
 </body>

@@ -3,482 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rafao — produção musical, mix, master, sound design</title>
-  <meta name="description" content="rafao — produção musical, mixagem, masterização, sound design e trilha sonora." />
-  <meta name="theme-color" content="#07070b" />
+  <title>rafao</title>
+  <meta name="description" content="rafao — produtor musical, DJ, sound designer e engenheiro de áudio." />
+  <meta name="theme-color" content="#0a0a0b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307070b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f1efe9' stroke-width='2'/%3E%3C/svg%3E" />
 </head>
 <body>
 
 <a class="skip" href="#conteudo">pular para o conteúdo</a>
 
-<header class="site-header">
-  <div class="page">
-    <a href="#topo" class="brand">rafao</a>
-    <nav class="nav" id="nav" aria-label="Navegação principal">
-      <a href="#sobre">Sobre</a>
-      <a href="#lancamentos">Lançamentos</a>
-      <a href="#discografia">Catálogo</a>
-      <a href="#colaboracoes">Colaborações</a>
-      <a href="#selo">Selo</a>
-      <a href="synths.html">Synths</a>
-    </nav>
-    <a href="#contato" class="nav-cta">contato ↗</a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
-    </button>
+<aside class="rail">
+  <a class="rail-brand" href="index.html">rafao</a>
+  <nav class="rail-nav" aria-label="Seções">
+    <a href="index.html" class="active" aria-current="page"><span class="n">00</span>Início</a>
+    <a href="perfil.html"><span class="n">01</span>Perfil</a>
+    <a href="lancamentos.html"><span class="n">02</span>Lançamentos</a>
+    <a href="catalogo.html"><span class="n">03</span>Catálogo</a>
+    <a href="colaboracoes.html"><span class="n">04</span>Colaborações</a>
+    <a href="selo.html"><span class="n">05</span>Selo</a>
+    <a href="contato.html"><span class="n">06</span>Contato</a>
+    <a href="synths.html"><span class="n">07</span>Synths</a>
+  </nav>
+  <div class="rail-foot">
+    <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp ↗</a>
+    <a href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">bloodworm trax ↗</a>
   </div>
-</header>
+</aside>
 
-<main id="conteudo">
+<main id="conteudo" class="main">
 
-  <!-- ── hero ── -->
-  <section class="hero" id="topo">
-    <div class="hero-media" aria-hidden="true">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
       <img src="rafitos.JPEG" alt="" />
     </div>
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="hero-grid" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="hero-geo" aria-hidden="true">
-      <div class="geo geo--sphere">
-        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="100" cy="100" r="96" />
-          <ellipse cx="100" cy="100" rx="96" ry="34" />
-          <ellipse cx="100" cy="100" rx="96" ry="68" />
-          <ellipse cx="100" cy="100" rx="34" ry="96" />
-          <ellipse cx="100" cy="100" rx="68" ry="96" />
-        </svg>
-      </div>
-      <div class="geo geo--torus">
-        <svg viewBox="0 0 160 100" fill="none" stroke="currentColor" stroke-width="1">
-          <ellipse cx="80" cy="50" rx="74" ry="46" />
-          <ellipse cx="80" cy="50" rx="74" ry="26" />
-          <ellipse cx="80" cy="50" rx="42" ry="46" />
-          <ellipse cx="80" cy="50" rx="20" ry="26" />
-        </svg>
-      </div>
-      <div class="geo geo--cube">
-        <svg viewBox="0 0 120 132" fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M60 4 116 36v64L60 132 4 100V36Z" />
-          <path d="M60 68 4 36m56 32 56-32M60 68v64" />
-        </svg>
-      </div>
-      <div class="geo geo--rings">
-        <svg viewBox="0 0 320 320" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="160" cy="160" r="158" stroke-dasharray="1 9" />
-          <circle cx="160" cy="160" r="132" />
-          <circle cx="160" cy="160" r="96" stroke-dasharray="2 12" />
-          <circle cx="160" cy="160" r="58" />
-          <circle cx="160" cy="160" r="16" />
-          <path d="M160 4v312M4 160h312" opacity=".28" />
-          <circle cx="160" cy="28" r="3" fill="currentColor" stroke="none" />
-          <circle cx="292" cy="160" r="3" fill="currentColor" stroke="none" />
-        </svg>
-      </div>
-      <div class="geo geo--orbit">
-        <svg viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="110" cy="110" r="106" stroke-dasharray="1 8" />
-          <circle cx="110" cy="110" r="76" />
-          <circle cx="110" cy="110" r="8" fill="currentColor" stroke="none" />
-          <circle cx="110" cy="4" r="4" fill="currentColor" stroke="none" />
-        </svg>
-      </div>
-      <div class="geo geo--dots"></div>
-    </div>
-    <div class="hero-spot" aria-hidden="true"></div>
-
-    <div class="page hero-inner">
-      <h1 class="hero-name">rafao</h1>
-
-      <div class="hero-foot">
-        <div class="hero-actions">
-          <a class="tlink" href="#lancamentos">lançamentos <span class="arw">↗</span></a>
-          <a class="tlink" href="#discografia">catálogo <span class="arw">↗</span></a>
-          <a class="tlink" href="#colaboracoes">colaborações <span class="arw">↗</span></a>
-          <a class="tlink" href="#contato">contato <span class="arw">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 01 sobre ── -->
-  <section class="section" id="sobre">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">01</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Perfil</h2>
-        </div>
-      </div>
-
-      <div class="sobre">
-        <div class="sobre-media reveal">
-          <div class="ph m1"><img src="rafao2.JPEG" alt="rafao em estúdio" loading="lazy" /></div>
-          <div class="ph m2"><img src="rafao3.JPEG" alt="rafao ao vivo" loading="lazy" /></div>
-          <div class="ph m3"><img src="rafao4.JPEG" alt="rafao em performance" loading="lazy" /></div>
-        </div>
-
-        <div class="bio reveal">
-          <p class="bio-lead">rafao é produtor musical, DJ, sound designer e engenheiro de áudio.</p>
-          <p>Produção musical, mixagem, masterização, sound design e trilha sonora. O catálogo passa por experimental, jungle, drum &amp; bass, UK garage, dubstep, grime, ambient, house e downtempo.</p>
-          <a class="tlink bio-link" href="synths.html">projetos de programação <span class="arw">↗</span></a>
-
-          <dl class="ficha">
-            <div><dt>selo</dt><dd>Bloodworm Trax</dd></div>
-            <div><dt>alter ego</dt><dd>DJ Aurous</dd></div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 02 lançamentos ── -->
-  <section class="section" id="lancamentos">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">02</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Últimos lançamentos</h2>
-        </div>
-      </div>
-
-      <article class="featured reveal">
-        <div class="featured-art">
-          <img src="https://f4.bcbits.com/img/a1072240487_2.jpg" alt="Capa de Tira a Blusa" loading="lazy" />
-        </div>
-        <div class="featured-info">
-          <h3>Tira a Blusa</h3>
-          <div class="rel-meta">
-            <span>rafao & blackmesa</span><span>single</span><span>ago 2026</span>
-          </div>
-          <p class="desc">Single feito com <strong>BLACKMESA</strong>, entre bass music, grime e experimentalismo.</p>
-          <div class="tags"><span>bass music</span><span>grime</span><span>experimental</span></div>
-          <iframe title="Player Bandcamp — Tira a Blusa" src="https://bandcamp.com/EmbeddedPlayer/track=1054607030/size=large/bgcol=0a0a11/linkcol=a5a6ff/artwork=small/transparent=true/" seamless loading="lazy"></iframe>
-        </div>
-      </article>
-
-      <div class="release-strip reveal">
-        <a class="strip-item" href="https://bloodwormtrax.bandcamp.com/track/anter-grada" target="_blank" rel="noopener">
-          <span class="idx">02</span>
-          <img src="https://f4.bcbits.com/img/a3227386020_7.jpg" alt="Capa de Anterograda" loading="lazy" />
-          <h4>Anterograda<em>c/ Matesu · jul 2026</em></h4>
-          <span class="arw">↗</span>
-        </a>
-        <a class="strip-item" href="https://rafao.bandcamp.com/track/monotonia" target="_blank" rel="noopener">
-          <span class="idx">03</span>
-          <img src="https://f4.bcbits.com/img/a0134367948_7.jpg" alt="Capa de Monotonia" loading="lazy" />
-          <h4>Monotonia<em>c/ DSPRS · jul 2026</em></h4>
-          <span class="arw">↗</span>
-        </a>
-        <a class="strip-item" href="https://rafao.bandcamp.com/album/jungle-research-vol-1" target="_blank" rel="noopener">
-          <span class="idx">04</span>
-          <img src="https://f4.bcbits.com/img/a2753400803_7.jpg" alt="Capa de Jungle Research Vol. 1" loading="lazy" />
-          <h4>Jungle Research Vol. 1<em>álbum · mai 2025</em></h4>
-          <span class="arw">↗</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 03 catálogo ── -->
-  <section class="section" id="discografia">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">03</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Catálogo</h2>
-        </div>
-      </div>
-
-      <div class="sec-intro reveal">
-        <p>14 lançamentos no Bandcamp, de 2020 a 2026.</p>
-      </div>
-
-      <div class="catalog reveal">
-
-        <div class="cat-group">
-          <span class="cat-year">2026</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/tira-a-blusa" target="_blank" rel="noopener">
-              <span class="cat-idx">01</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a1072240487_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Tira a Blusa <em>feat. blackmesa</em></span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/monotonia" target="_blank" rel="noopener">
-              <span class="cat-idx">02</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a0134367948_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Monotonia <em>feat. dsprs</em></span>
-            </a>
-            <a class="cat-row" href="https://bloodwormtrax.bandcamp.com/track/anter-grada" target="_blank" rel="noopener">
-              <span class="cat-idx">03</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a3227386020_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Anterograda <em>feat. matesu</em></span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cat-group">
-          <span class="cat-year">2025</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/jungle-research-vol-1" target="_blank" rel="noopener">
-              <span class="cat-idx">04</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a2753400803_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Jungle Research Vol. 1</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/instant-reaction" target="_blank" rel="noopener">
-              <span class="cat-idx">05</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a1899353066_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Instant Reaction</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/surplus-fruit-jumble" target="_blank" rel="noopener">
-              <span class="cat-idx">06</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a2481443267_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Surplus Fruit Jumble</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cat-group">
-          <span class="cat-year">2024</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/sentido-reverso" target="_blank" rel="noopener">
-              <span class="cat-idx">07</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a2572877067_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Sentido Reverso</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/n-o-se-assusta" target="_blank" rel="noopener">
-              <span class="cat-idx">08</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a1517062388_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Não Se Assusta</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cat-group">
-          <span class="cat-year">2023</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/handpicked-strange-tracks-vol-2" target="_blank" rel="noopener">
-              <span class="cat-idx">09</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a3307381697_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Handpicked Strange Tracks Vol. 2</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/m-sicas-para-sair-do-trabalho" target="_blank" rel="noopener">
-              <span class="cat-idx">10</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a3583265571_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Músicas Para Sair do Trabalho</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/track/100-carinho" target="_blank" rel="noopener">
-              <span class="cat-idx">11</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a1838874695_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">100 Carinho</span>
-            </a>
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/oi" target="_blank" rel="noopener">
-              <span class="cat-idx">12</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a2780093779_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Oi.</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cat-group">
-          <span class="cat-year">2022</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/mended-atmosphere" target="_blank" rel="noopener">
-              <span class="cat-idx">13</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a1332673021_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Mended Atmosphere</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="cat-group">
-          <span class="cat-year">2020</span>
-          <div class="cat-rows">
-            <a class="cat-row" href="https://rafao.bandcamp.com/album/handpicked-strange-tracks-vol-1" target="_blank" rel="noopener">
-              <span class="cat-idx">14</span>
-              <img class="cat-thumb" src="https://f4.bcbits.com/img/a3940742282_7.jpg" alt="" loading="lazy" />
-              <span class="cat-title">Handpicked Strange Tracks Vol. 1</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="catalog-foot reveal">
-        <div class="foot-links">
-          <a class="tlink" href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp <span class="arw">↗</span></a>
-          <a class="tlink" href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">spotify <span class="arw">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 04 colaborações ── -->
-  <section class="section" id="colaboracoes">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">04</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Colaborações</h2>
-        </div>
-      </div>
-
-      <div class="collab">
-        <article class="collab-feature reveal">
-          <div class="art">
-            <img src="https://f4.bcbits.com/img/a1072240487_2.jpg" alt="Capa de Tira a Blusa" loading="lazy" />
-          </div>
-          <div>
-            <h3>Tira a Blusa</h3>
-            <p class="collab-role">rafao & blackmesa · ago 2026</p>
-            <p>Bass music com grime e experimentalismo, feita com <strong>BLACKMESA</strong>.</p>
-            <div class="tags"><span>bass music</span><span>grime</span><span>experimental</span></div>
-            <a class="tlink" href="https://rafao.bandcamp.com/track/tira-a-blusa" target="_blank" rel="noopener">ouvir no bandcamp <span class="arw">↗</span></a>
-          </div>
-        </article>
-
-        <div class="collab-side">
-          <article class="collab-mini reveal">
-            <div class="art">
-              <img src="https://f4.bcbits.com/img/a2314791318_2.jpg" alt="Capa de Kaki Pomme" loading="lazy" />
-            </div>
-            <h4>Kaki Pomme</h4>
-            <p class="collab-role">coletânea · díospiros</p>
-            <p>Primeira coletânea do selo <strong>Dióspiros</strong>: 19 artistas em 18 faixas. rafao aparece com "Monotonia".</p>
-            <a class="tlink" href="https://diospiros.bandcamp.com/album/dps001-kaki-pomme" target="_blank" rel="noopener">coletânea completa <span class="arw">↗</span></a>
-          </article>
-
-          <article class="collab-mini reveal">
-            <div class="art">
-              <img src="https://f4.bcbits.com/img/a3227386020_2.jpg" alt="Capa de Antologia" loading="lazy" />
-            </div>
-            <h4>Antologia</h4>
-            <p class="collab-role">compilação · bloodworm trax</p>
-            <p>Compilação do <strong>Bloodworm Trax</strong>. rafao aparece com "Anterograda".</p>
-            <a class="tlink" href="https://bloodwormtrax.bandcamp.com/album/btx003-antologia" target="_blank" rel="noopener">compilação completa <span class="arw">↗</span></a>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 05 selo ── -->
-  <section class="section" id="selo">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">05</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Selo</h2>
-        </div>
-      </div>
-
-      <div class="label reveal">
-        <div class="label-mark">
-          <h3>Bloodworm Trax</h3>
-        </div>
-        <div class="label-copy">
-          <p>Selo independente fundado por rafao e Matesu. Catálogo com três lançamentos, de 2024 a 2026.</p>
-          <div class="label-links">
-            <a class="tlink" href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">site do selo <span class="arw">↗</span></a>
-            <a class="tlink" href="https://bloodwormtrax.bandcamp.com" target="_blank" rel="noopener">bandcamp <span class="arw">↗</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="label-releases reveal">
-        <a class="label-rel" href="https://bloodwormtrax.bandcamp.com/album/btx001-lagerhaus-i" target="_blank" rel="noopener">
-          <span class="label-rel-idx">bTx001</span>
-          <span class="label-rel-title">Lagerhaus I</span>
-          <span class="label-rel-meta">DJ Aurous, DJ Cybershot · 2024</span>
-          <span class="arw">↗</span>
-        </a>
-        <a class="label-rel" href="https://bloodwormtrax.bandcamp.com/track/btx002-simpatia" target="_blank" rel="noopener">
-          <span class="label-rel-idx">bTx002</span>
-          <span class="label-rel-title">simpatia</span>
-          <span class="label-rel-meta">Matesu, kiddo · 2026</span>
-          <span class="arw">↗</span>
-        </a>
-        <a class="label-rel" href="https://bloodwormtrax.bandcamp.com/album/btx003-antologia" target="_blank" rel="noopener">
-          <span class="label-rel-idx">bTx003</span>
-          <span class="label-rel-title">Antologia</span>
-          <span class="label-rel-meta">Matesu · 2026</span>
-          <span class="arw">↗</span>
-        </a>
-      </div>
-
-      <div class="alias reveal">
-        <div class="alias-head">
-          <h4><a href="https://djaurous.bandcamp.com" target="_blank" rel="noopener">DJ Aurous</a></h4>
-        </div>
-        <div class="alias-copy">
-          <p>Projeto de rafao para house, UK garage e lo-fi. Lança pelo selo e em faixas avulsas.</p>
-          <div class="alias-links">
-            <a class="tlink" href="https://djaurous.bandcamp.com" target="_blank" rel="noopener">bandcamp do projeto <span class="arw">↗</span></a>
-            <a class="tlink" href="https://djaurous.bandcamp.com/track/boost-shuffle" target="_blank" rel="noopener">boost shuffle <span class="arw">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 06 contato ── -->
-  <section class="section" id="contato">
-    <div class="page">
-      <div class="sec-head reveal">
-        <span class="sec-num">06</span>
-        <div class="sec-body">
-          <h2 class="sec-title">Contato</h2>
-        </div>
-      </div>
-
-      <div class="contact">
-        <div class="contact-list reveal">
-          <a class="contact-row" href="https://rafao.bandcamp.com" target="_blank" rel="noopener">
-            <span class="idx">01</span><span>Bandcamp</span><span class="arw">↗</span>
-          </a>
-          <a class="contact-row" href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">
-            <span class="idx">02</span><span>Spotify</span><span class="arw">↗</span>
-          </a>
-          <a class="contact-row" href="https://soundcloud.com/rafaowav" target="_blank" rel="noopener">
-            <span class="idx">03</span><span>SoundCloud</span><span class="arw">↗</span>
-          </a>
-          <a class="contact-row" href="https://www.instagram.com/rafao_wav/" target="_blank" rel="noopener">
-            <span class="idx">04</span><span>Instagram</span><span class="arw">↗</span>
-          </a>
-          <a class="contact-row" href="https://twitter.com/rafao_wav" target="_blank" rel="noopener">
-            <span class="idx">05</span><span>X / Twitter</span><span class="arw">↗</span>
-          </a>
-          <a class="contact-row" href="https://wa.me/+5512992413518?text=ol%C3%A1!!%20vamos%20trabalhar!?" target="_blank" rel="noopener">
-            <span class="idx">06</span><span>WhatsApp</span><span class="arw">↗</span>
-          </a>
-        </div>
-      </div>
+    <div class="wrap hero-inner">
+      <h1 class="reveal">rafao</h1>
+      <p class="hero-line reveal">produtor musical, DJ, sound designer e engenheiro de áudio.</p>
+      <nav class="hero-nav reveal" aria-label="Atalhos">
+        <a href="perfil.html">perfil</a>
+        <a href="catalogo.html">catálogo</a>
+        <a href="contato.html">contato</a>
+      </nav>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="page">
+<footer class="footer">
+  <div class="wrap">
     <span class="f-brand">rafao</span>
     <div class="f-links">
       <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp</a>
       <a href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">spotify</a>
       <a href="https://soundcloud.com/rafaowav" target="_blank" rel="noopener">soundcloud</a>
       <a href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">bloodworm trax</a>
-      <a href="synths.html">synths</a>
     </div>
   </div>
 </footer>
-
-<div class="page-cursor" aria-hidden="true"></div>
 
 <script src="js/main.js" defer></script>
 </body>
