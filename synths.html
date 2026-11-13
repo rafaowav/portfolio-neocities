@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rafao — synths</title>
+  <meta name="description" content="rafao — instrumentos e ferramentas de áudio desenvolvidos com Matesu: Opcoda e MiniSynth32." />
+  <meta name="theme-color" content="#07070b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307070b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<a class="skip" href="#conteudo">pular para o conteúdo</a>
+
+<div class="topbar">
+  <div class="page">
+    <div><span class="dot"></span>rafao — portfólio 2026</div>
+    <div class="hide-sm">são paulo · br</div>
+    <div class="hide-sm">produção · mix · master · sound design</div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="page">
+    <a href="index.html#topo" class="brand">rafao <small>hub</small></a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#lancamentos">Lançamentos</a>
+      <a href="index.html#discografia">Catálogo</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#colaboracoes">Colaborações</a>
+      <a href="synths.html" class="active" aria-current="page">Synths</a>
+      <a href="index.html#alterego">Alter ego</a>
+    </nav>
+    <a href="index.html#contato" class="nav-cta">contato ↗</a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ── hero ── -->
+  <section class="syn-hero">
+    <div class="page">
+      <div class="syn-top">
+        <span class="micro micro--accent">instrumentos · dsp · interface</span>
+        <span class="micro hide-sm">02 projetos</span>
+      </div>
+
+      <h1 class="syn-title">synths</h1>
+
+      <div class="syn-intro">
+        <p class="syn-lead">Instrumentos que desenvolvi com Matesu — do motor de síntese à interface. Som feito com código, não só com samples.</p>
+        <div class="syn-aside">
+          <span>opcoda — sintetizador granular</span>
+          <span>minisynth32 — hardware + web</span>
+          <span>código no github</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 01 opcoda ── -->
+  <section class="section" id="opcoda">
+    <div class="page">
+      <div class="sec-head reveal">
+        <span class="sec-num">01</span>
+        <div class="sec-body">
+          <h2 class="sec-title">Plugin</h2>
+        </div>
+        <span class="sec-note">granular<br />vst3 + standalone</span>
+      </div>
+
+      <article class="proj">
+        <figure class="proj-media reveal">
+          <div class="shot">
+            <img src="img/opcoda-ui.png" alt="Interface do Opcoda mostrando a forma de onda de um binário PE, controles de grão e teclado" loading="lazy" />
+          </div>
+          <figcaption>captura real · opcoda v0.1.0 / windows x64</figcaption>
+        </figure>
+
+        <div class="proj-info reveal">
+          <div class="proj-head">
+            <h3>Opcoda</h3>
+            <p class="collab-role">sintetizador granular · c++20 / juce 8</p>
+          </div>
+
+          <p class="proj-desc">Opcoda usa binários PE como matéria-prima sonora: lê o arquivo, fatia os bytes em grãos e deixa você tocar isso como um instrumento. A interface mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
+          <p class="proj-desc">A ideia vem do <strong>databending</strong> — pegar arquivos que não foram feitos para soar e usá-los como fonte de som. Versão 0.1.0, para Windows x64.</p>
+
+          <dl class="spec">
+            <div><dt>autor principal</dt><dd>Matesu</dd></div>
+            <div><dt>minha parte</dt><dd>Motor, interface, presets</dd></div>
+            <div><dt>formato</dt><dd>VST3 + standalone</dd></div>
+            <div><dt>plataforma</dt><dd>Windows x64</dd></div>
+            <div><dt>stack</dt><dd>C++20 · JUCE 8</dd></div>
+            <div><dt>versão</dt><dd>0.1.0</dd></div>
+          </dl>
+
+          <div class="tags"><span>granular</span><span>databending</span><span>vst3</span><span>juce</span></div>
+
+          <div class="proj-links">
+            <a class="tlink" href="https://github.com/9matesu/Opcoda" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
+          </div>
+
+          <p class="credit"><b>créditos</b> — Matesu assina o projeto. Contribuí com o motor e a interface, os presets de fábrica e a configuração de build local.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── 02 minisynth32 ── -->
+  <section class="section" id="minisynth">
+    <div class="page">
+      <div class="sec-head reveal">
+        <span class="sec-num">02</span>
+        <div class="sec-body">
+          <h2 class="sec-title">Hardware</h2>
+        </div>
+        <span class="sec-note">esp32-s3<br />interface web</span>
+      </div>
+
+      <article class="proj">
+        <figure class="proj-media reveal">
+          <div class="chain">
+            <div class="chain-row">
+              <span class="chain-node">ESP32-S3</span>
+              <span class="chain-link">serial usb</span>
+              <span class="chain-node">node / express</span>
+              <span class="chain-link">ws + rest</span>
+              <span class="chain-node">react</span>
+            </div>
+            <div class="chain-row">
+              <span class="chain-node">motor de síntese</span>
+              <span class="chain-link">i2s</span>
+              <span class="chain-node">pcm5102a</span>
+              <span class="chain-link">p2 3,5 mm</span>
+              <span class="chain-node">saída estéreo</span>
+            </div>
+            <p class="chain-cap">áudio no firmware, controle na web</p>
+          </div>
+          <figcaption>arquitetura em duas camadas</figcaption>
+        </figure>
+
+        <div class="proj-info reveal">
+          <div class="proj-head">
+            <h3>MiniSynth32</h3>
+            <p class="collab-role">sintetizador digital · esp32-s3 + interface web</p>
+          </div>
+
+          <p class="proj-desc">Um sintetizador em hardware: o <strong>ESP32-S3</strong> gera o áudio, o DAC <strong>PCM5102A</strong> converte para estéreo e um servidor Node faz a ponte com a interface em React. Os parâmetros chegam em tempo real por WebSocket, e os presets ficam salvos em SQLite.</p>
+          <p class="proj-desc">Projeto de curricularização do curso de Análise e Desenvolvimento de Sistemas da <strong>FATEC Cruzeiro</strong>, desenvolvido para o programa <strong>Acelera 01/2026</strong>. Entrei no fim do processo, fechando a versão final entregue.</p>
+
+          <dl class="spec">
+            <div><dt>autor principal</dt><dd>Matesu</dd></div>
+            <div><dt>minha parte</dt><dd>Versão final</dd></div>
+            <div><dt>mcu</dt><dd>ESP32-S3</dd></div>
+            <div><dt>dac</dt><dd>PCM5102A · I2S</dd></div>
+            <div><dt>backend</dt><dd>Node.js · Express</dd></div>
+            <div><dt>frontend</dt><dd>React · Vite</dd></div>
+            <div><dt>dados</dt><dd>SQLite</dd></div>
+            <div><dt>contexto</dt><dd>FATEC Cruzeiro · Acelera 01/2026</dd></div>
+          </dl>
+
+          <div class="tags"><span>esp32</span><span>síntese subtrativa</span><span>react</span><span>websocket</span></div>
+
+          <div class="proj-links">
+            <a class="tlink" href="https://github.com/9matesu/minisynth32" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
+          </div>
+
+          <p class="credit"><b>créditos</b> — Matesu assina o projeto. Fiquei responsável pelo fechamento da versão final.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── 03 notas ── -->
+  <section class="section" id="notas">
+    <div class="page">
+      <div class="sec-head reveal">
+        <span class="sec-num">03</span>
+        <div class="sec-body">
+          <h2 class="sec-title">Como trabalho</h2>
+        </div>
+        <span class="sec-note">estudo<br />ferramenta</span>
+      </div>
+
+      <div class="sec-intro reveal">
+        <p>Os dois projetos são a mesma curiosidade aplicada de jeitos diferentes: entender o som por dentro, seja abrindo um binário, seja escrevendo firmware. Aprendo construindo — e uso o que aprendo na produção.</p>
+      </div>
+
+      <div class="proj-jump reveal">
+        <a class="tlink" href="https://github.com/9matesu/Opcoda" target="_blank" rel="noopener">opcoda no github <span class="arw">↗</span></a>
+        <a class="tlink" href="https://github.com/9matesu/minisynth32" target="_blank" rel="noopener">minisynth32 no github <span class="arw">↗</span></a>
+        <a class="tlink" href="index.html#discografia">voltar ao catálogo <span class="arw">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="page">
+    <span class="f-brand">rafao</span>
+    <span>© 2026 — sonic adventurer</span>
+    <span>produção · mix · master · sound design</span>
+    <div class="f-links">
+      <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp</a>
+      <a href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">spotify</a>
+      <a href="https://soundcloud.com/rafaowav" target="_blank" rel="noopener">soundcloud</a>
+      <a href="index.html">portfólio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
