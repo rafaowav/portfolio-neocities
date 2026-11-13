@@ -8,6 +8,7 @@
       --dim:#605e58;
       --line:rgba(241,239,233,.14);
       --line-soft:rgba(241,239,233,.07);
+      --accent:#6d8aff;
 
       --rail:clamp(190px,16vw,240px);
       --wrap:1240px;
@@ -86,8 +87,8 @@
       border-bottom:1px solid var(--line);padding-bottom:3px;
       transition:color .15s,border-color .15s;
     }
-    .tlink:hover{color:var(--paper);border-color:var(--paper)}
-    .tlink:hover .arw{color:var(--paper)}
+    .tlink:hover{color:var(--accent);border-color:var(--accent)}
+    .tlink:hover .arw{color:var(--accent)}
 
     /* ───────────────────────────── home ────────────────────────────── */
     .hero{
@@ -272,9 +273,9 @@
       padding:16px 0;border-bottom:1px solid var(--line-soft);
       font-size:15px;color:var(--ink);transition:color .15s;
     }
-    .contact a:hover{color:var(--paper)}
+    .contact a:hover{color:var(--accent)}
     .contact a .arw{transition:transform .15s}
-    .contact a:hover .arw{transform:translate(2px,-2px);color:var(--paper)}
+    .contact a:hover .arw{transform:translate(2px,-2px);color:var(--accent)}
 
     /* ───────────────────────────── synths ──────────────────────────── */
     .syn-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -347,7 +348,7 @@
     }
     .f-brand{font-size:14px;font-weight:600;color:var(--paper)}
     .f-links{display:flex;flex-wrap:wrap;gap:8px 18px}
-    .f-links a:hover{color:var(--paper)}
+    .f-links a:hover{color:var(--accent)}
 
     /* ───────────────────────────── reveal ──────────────────────────── */
     .reveal{opacity:0;transform:translateY(10px);
