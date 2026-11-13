@@ -28,7 +28,6 @@
     <a href="contato.html"><span class="n">06</span>contato</a>
     <a href="synths.html"><span class="n">07</span>synths</a>
   </nav>
-  <button class="theme-toggle" aria-label="Alternar tema" onclick="toggleTheme()" title="Tema"></button>
   <div class="rail-foot">
     <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp ↗</a>
     <a href="https://bloodwormtrax.neocities.org/" target="_blank" rel="noopener">bloodworm trax ↗</a>
@@ -62,19 +61,5 @@
 </footer>
 
 <script src="js/main.js" defer></script>
-<script>
-function toggleTheme() {
-  const html = document.documentElement;
-  if (html.getAttribute('data-theme') === 'light') {
-    html.setAttribute('data-theme', 'dark');
-    html.classList.remove('theme-light');
-    html.classList.add('theme-dark');
-  } else {
-    html.setAttribute('data-theme', 'light');
-    html.classList.remove('theme-dark');
-    html.classList.add('theme-light');
-  }
-}
-</script>
 </body>
 </html>
