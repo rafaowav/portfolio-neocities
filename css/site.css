@@ -10,6 +10,13 @@
       --line-soft:rgba(241,239,233,.07);
       --accent:#6d8aff;
 
+      --light-bg:#f8f8f8;
+      --light-paper:#ffffff;
+      --light-ink:#1a1a1a;
+      --light-muted:#666666;
+      --light-dim:#888888;
+      --light-line:rgba(0,0,0,.1);
+
       --rail:clamp(190px,16vw,240px);
       --wrap:1240px;
       --pad:clamp(20px,4vw,64px);
@@ -54,6 +61,8 @@
       background:var(--bg);
       border-right:1px solid var(--line);
     }
+    .rail.theme-light{--bg:var(--light-bg);--paper:var(--light-paper);--ink:var(--light-ink);--muted:var(--light-muted);--dim:var(--light-dim);--line:var(--light-line)}
+    .rail.theme-dark{--bg:var(--bg);--paper:var(--paper);--ink:var(--ink);--muted:var(--muted);--dim:var(--dim);--line:var(--line)}
     .rail-brand{
       font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--paper);
     }
