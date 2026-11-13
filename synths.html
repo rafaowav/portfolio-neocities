@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#07070b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307070b'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366f1' stroke-width='2'/%3E%3C/svg%3E" />
 </head>
@@ -23,11 +23,9 @@
       <a href="index.html#sobre">Sobre</a>
       <a href="index.html#lancamentos">Lançamentos</a>
       <a href="index.html#discografia">Catálogo</a>
-      <a href="index.html#servicos">Serviços</a>
       <a href="index.html#colaboracoes">Colaborações</a>
       <a href="index.html#selo">Selo</a>
       <a href="synths.html" class="active" aria-current="page">Synths</a>
-      <a href="index.html#alterego">Alter ego</a>
     </nav>
     <a href="index.html#contato" class="nav-cta">contato ↗</a>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
@@ -44,11 +42,7 @@
       <h1 class="syn-title">synths</h1>
 
       <div class="syn-intro">
-        <p class="syn-lead">Projetos de programação e áudio em que participei. Um é um plugin, o outro é um sintetizador em hardware.</p>
-        <div class="syn-aside">
-          <span>opcoda · plugin</span>
-          <span>minisynth32 · hardware</span>
-        </div>
+        <p class="syn-lead">Projetos de programação e áudio: Opcoda e MiniSynth32.</p>
       </div>
     </div>
   </section>
@@ -61,7 +55,6 @@
         <div class="sec-body">
           <h2 class="sec-title">Opcoda</h2>
         </div>
-        <span class="sec-note">plugin granular<br />vst3 + standalone</span>
       </div>
 
       <article class="proj">
@@ -69,16 +62,11 @@
           <div class="shot">
             <img src="img/opcoda-ui.png" alt="Interface do Opcoda mostrando a forma de onda de um binário PE, controles de grão e teclado" loading="lazy" />
           </div>
-          <figcaption>captura real · opcoda v0.1.0 / windows x64</figcaption>
         </figure>
 
         <div class="proj-info reveal">
-          <div class="proj-head">
-            <p class="collab-role">plugin granular · c++20 / juce 8</p>
-          </div>
-
           <p class="proj-desc">O Opcoda lê executáveis do Windows (arquivos PE), corta os bytes em grãos e usa isso como fonte de som. A tela mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
-          <p class="proj-desc">É databending aplicado a um plugin: arquivos que não foram feitos para soar viram instrumento. Versão 0.1.0, para Windows x64.</p>
+          <p class="proj-desc">É databending em formato de plugin. Versão 0.1.0, Windows x64.</p>
 
           <dl class="spec">
             <div><dt>formato</dt><dd>VST3 + standalone</dd></div>
@@ -105,7 +93,6 @@
         <div class="sec-body">
           <h2 class="sec-title">MiniSynth32</h2>
         </div>
-        <span class="sec-note">sintetizador digital<br />esp32-s3 + interface web</span>
       </div>
 
       <article class="proj">
@@ -127,14 +114,9 @@
             </div>
             <p class="chain-cap">áudio no firmware, controle na web</p>
           </div>
-          <figcaption>minisynth32 · cadeia de sinal</figcaption>
         </figure>
 
         <div class="proj-info reveal">
-          <div class="proj-head">
-            <p class="collab-role">sintetizador digital · esp32-s3 + interface web</p>
-          </div>
-
           <p class="proj-desc">O firmware roda no <strong>ESP32-S3</strong> e gera o áudio. O DAC <strong>PCM5102A</strong> converte para a saída P2, um servidor Node recebe os dados por serial e repassa para a interface React por WebSocket. Os presets ficam em SQLite.</p>
           <p class="proj-desc">Trabalho de curricularização do curso de Análise e Desenvolvimento de Sistemas da <strong>FATEC Cruzeiro</strong>, feito para o <strong>Acelera 01/2026</strong>.</p>
 
@@ -157,19 +139,18 @@
     </div>
   </section>
 
-  <!-- ── 03 notas ── -->
-  <section class="section" id="notas">
+  <!-- ── 03 repositórios ── -->
+  <section class="section" id="repos">
     <div class="page">
       <div class="sec-head reveal">
         <span class="sec-num">03</span>
         <div class="sec-body">
-          <h2 class="sec-title">Notas</h2>
+          <h2 class="sec-title">Repositórios</h2>
         </div>
-        <span class="sec-note">processo<br />referências</span>
       </div>
 
       <div class="sec-intro reveal">
-        <p>Um é plugin, o outro é hardware. São projetos separados. O Opcoda lê arquivos onde normalmente não se procura som; o MiniSynth32 existe em cima de uma mesa, com firmware, DAC e interface web.</p>
+        <p>Código dos dois projetos no GitHub.</p>
       </div>
 
       <div class="proj-jump reveal">
@@ -185,8 +166,6 @@
 <footer class="site-footer">
   <div class="page">
     <span class="f-brand">rafao</span>
-    <span>© 2026 — sonic adventurer</span>
-    <span>produção · mix · master · sound design</span>
     <div class="f-links">
       <a href="https://rafao.bandcamp.com" target="_blank" rel="noopener">bandcamp</a>
       <a href="https://open.spotify.com/artist/5esIjpKHUVFABUtfayhuJg" target="_blank" rel="noopener">spotify</a>
@@ -195,6 +174,8 @@
     </div>
   </div>
 </footer>
+
+<div class="page-cursor" aria-hidden="true"></div>
 
 <script src="js/main.js" defer></script>
 </body>

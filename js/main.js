@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── parallax, luz e cursor do hero ──
+  // ── parallax e luz do hero ──
   const hero = document.querySelector('.hero');
   if (hero && !reduceMotion) {
     let raf = null;
@@ -74,35 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let my = 0;
     let px = 50;
     let py = 42;
-    let cx = -100;
-    let cy = -100;
-    let tx = -100;
-    let ty = -100;
 
     const render = () => {
-      cx += (tx - cx) * 0.16;
-      cy += (ty - cy) * 0.16;
-
       hero.style.setProperty('--mx', mx.toFixed(2) + 'px');
       hero.style.setProperty('--my', my.toFixed(2) + 'px');
       hero.style.setProperty('--px', px.toFixed(2) + '%');
       hero.style.setProperty('--py', py.toFixed(2) + '%');
-      hero.style.setProperty('--cx', cx.toFixed(1) + 'px');
-      hero.style.setProperty('--cy', cy.toFixed(1) + 'px');
-
-      raf = Math.abs(tx - cx) > 0.4 || Math.abs(ty - cy) > 0.4
-        ? requestAnimationFrame(render)
-        : null;
+      raf = null;
     };
 
     hero.addEventListener('mousemove', e => {
       const rect = hero.getBoundingClientRect();
-      tx = e.clientX - rect.left;
-      ty = e.clientY - rect.top;
-      px = (tx / rect.width) * 100;
-      py = (ty / rect.height) * 100;
-      mx = (tx / rect.width - 0.5) * 30;
-      my = (ty / rect.height - 0.5) * 30;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      px = (x / rect.width) * 100;
+      py = (y / rect.height) * 100;
+      mx = (x / rect.width - 0.5) * 30;
+      my = (y / rect.height - 0.5) * 30;
       if (!raf) raf = requestAnimationFrame(render);
     });
 
@@ -111,9 +99,42 @@ document.addEventListener('DOMContentLoaded', () => {
       my = 0;
       px = 50;
       py = 42;
+      if (!raf) raf = requestAnimationFrame(render);
+    });
+  }
+
+  // ── cursor global ──
+  const cursor = document.querySelector('.page-cursor');
+  if (cursor && !reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+    let raf = null;
+    let cx = -100;
+    let cy = -100;
+    let tx = -100;
+    let ty = -100;
+
+    const renderCursor = () => {
+      cx += (tx - cx) * 0.18;
+      cy += (ty - cy) * 0.18;
+      cursor.style.transform =
+        `translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0) scale(var(--cs,1))`;
+      raf = Math.abs(tx - cx) > 0.5 || Math.abs(ty - cy) > 0.5
+        ? requestAnimationFrame(renderCursor)
+        : null;
+    };
+
+    document.addEventListener('mousemove', e => {
+      tx = e.clientX;
+      ty = e.clientY;
+      cursor.classList.add('is-on');
+      cursor.classList.toggle('on-link', Boolean(e.target.closest('a, button')));
+      if (!raf) raf = requestAnimationFrame(renderCursor);
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursor.classList.remove('is-on');
       tx = -100;
       ty = -100;
-      if (!raf) raf = requestAnimationFrame(render);
+      if (!raf) raf = requestAnimationFrame(renderCursor);
     });
   }
 
