@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rafao — synths</title>
-  <meta name="description" content="rafao — instrumentos e ferramentas de áudio desenvolvidos com Matesu: Opcoda e MiniSynth32." />
+  <meta name="description" content="rafao — projetos de programação e áudio: Opcoda e MiniSynth32." />
   <meta name="theme-color" content="#07070b" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,23 +16,16 @@
 
 <a class="skip" href="#conteudo">pular para o conteúdo</a>
 
-<div class="topbar">
-  <div class="page">
-    <div><span class="dot"></span>rafao — portfólio 2026</div>
-    <div class="hide-sm">são paulo · br</div>
-    <div class="hide-sm">produção · mix · master · sound design</div>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="page">
-    <a href="index.html#topo" class="brand">rafao <small>hub</small></a>
+    <a href="index.html#topo" class="brand">rafao</a>
     <nav class="nav" id="nav" aria-label="Navegação principal">
       <a href="index.html#sobre">Sobre</a>
       <a href="index.html#lancamentos">Lançamentos</a>
       <a href="index.html#discografia">Catálogo</a>
       <a href="index.html#servicos">Serviços</a>
       <a href="index.html#colaboracoes">Colaborações</a>
+      <a href="index.html#selo">Selo</a>
       <a href="synths.html" class="active" aria-current="page">Synths</a>
       <a href="index.html#alterego">Alter ego</a>
     </nav>
@@ -48,19 +41,13 @@
   <!-- ── hero ── -->
   <section class="syn-hero">
     <div class="page">
-      <div class="syn-top">
-        <span class="micro micro--accent">instrumentos · dsp · interface</span>
-        <span class="micro hide-sm">02 projetos</span>
-      </div>
-
       <h1 class="syn-title">synths</h1>
 
       <div class="syn-intro">
-        <p class="syn-lead">Instrumentos que desenvolvi com Matesu — do motor de síntese à interface. Som feito com código, não só com samples.</p>
+        <p class="syn-lead">Projetos de programação e áudio em que participei. Um é um plugin, o outro é um sintetizador em hardware.</p>
         <div class="syn-aside">
-          <span>opcoda — sintetizador granular</span>
-          <span>minisynth32 — hardware + web</span>
-          <span>código no github</span>
+          <span>opcoda · plugin</span>
+          <span>minisynth32 · hardware</span>
         </div>
       </div>
     </div>
@@ -72,9 +59,9 @@
       <div class="sec-head reveal">
         <span class="sec-num">01</span>
         <div class="sec-body">
-          <h2 class="sec-title">Plugin</h2>
+          <h2 class="sec-title">Opcoda</h2>
         </div>
-        <span class="sec-note">granular<br />vst3 + standalone</span>
+        <span class="sec-note">plugin granular<br />vst3 + standalone</span>
       </div>
 
       <article class="proj">
@@ -87,16 +74,13 @@
 
         <div class="proj-info reveal">
           <div class="proj-head">
-            <h3>Opcoda</h3>
-            <p class="collab-role">sintetizador granular · c++20 / juce 8</p>
+            <p class="collab-role">plugin granular · c++20 / juce 8</p>
           </div>
 
-          <p class="proj-desc">Opcoda usa binários PE como matéria-prima sonora: lê o arquivo, fatia os bytes em grãos e deixa você tocar isso como um instrumento. A interface mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
-          <p class="proj-desc">A ideia vem do <strong>databending</strong> — pegar arquivos que não foram feitos para soar e usá-los como fonte de som. Versão 0.1.0, para Windows x64.</p>
+          <p class="proj-desc">O Opcoda lê executáveis do Windows (arquivos PE), corta os bytes em grãos e usa isso como fonte de som. A tela mostra o binário, a forma de onda e os controles de grão, envelope, filtro e modulação.</p>
+          <p class="proj-desc">É databending aplicado a um plugin: arquivos que não foram feitos para soar viram instrumento. Versão 0.1.0, para Windows x64.</p>
 
           <dl class="spec">
-            <div><dt>autor principal</dt><dd>Matesu</dd></div>
-            <div><dt>minha parte</dt><dd>Motor, interface, presets</dd></div>
             <div><dt>formato</dt><dd>VST3 + standalone</dd></div>
             <div><dt>plataforma</dt><dd>Windows x64</dd></div>
             <div><dt>stack</dt><dd>C++20 · JUCE 8</dd></div>
@@ -108,8 +92,6 @@
           <div class="proj-links">
             <a class="tlink" href="https://github.com/9matesu/Opcoda" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
           </div>
-
-          <p class="credit"><b>créditos</b> — Matesu assina o projeto. Contribuí com o motor e a interface, os presets de fábrica e a configuração de build local.</p>
         </div>
       </article>
     </div>
@@ -121,9 +103,9 @@
       <div class="sec-head reveal">
         <span class="sec-num">02</span>
         <div class="sec-body">
-          <h2 class="sec-title">Hardware</h2>
+          <h2 class="sec-title">MiniSynth32</h2>
         </div>
-        <span class="sec-note">esp32-s3<br />interface web</span>
+        <span class="sec-note">sintetizador digital<br />esp32-s3 + interface web</span>
       </div>
 
       <article class="proj">
@@ -145,21 +127,18 @@
             </div>
             <p class="chain-cap">áudio no firmware, controle na web</p>
           </div>
-          <figcaption>arquitetura em duas camadas</figcaption>
+          <figcaption>minisynth32 · cadeia de sinal</figcaption>
         </figure>
 
         <div class="proj-info reveal">
           <div class="proj-head">
-            <h3>MiniSynth32</h3>
             <p class="collab-role">sintetizador digital · esp32-s3 + interface web</p>
           </div>
 
-          <p class="proj-desc">Um sintetizador em hardware: o <strong>ESP32-S3</strong> gera o áudio, o DAC <strong>PCM5102A</strong> converte para estéreo e um servidor Node faz a ponte com a interface em React. Os parâmetros chegam em tempo real por WebSocket, e os presets ficam salvos em SQLite.</p>
-          <p class="proj-desc">Projeto de curricularização do curso de Análise e Desenvolvimento de Sistemas da <strong>FATEC Cruzeiro</strong>, desenvolvido para o programa <strong>Acelera 01/2026</strong>. Entrei no fim do processo, fechando a versão final entregue.</p>
+          <p class="proj-desc">O firmware roda no <strong>ESP32-S3</strong> e gera o áudio. O DAC <strong>PCM5102A</strong> converte para a saída P2, um servidor Node recebe os dados por serial e repassa para a interface React por WebSocket. Os presets ficam em SQLite.</p>
+          <p class="proj-desc">Trabalho de curricularização do curso de Análise e Desenvolvimento de Sistemas da <strong>FATEC Cruzeiro</strong>, feito para o <strong>Acelera 01/2026</strong>.</p>
 
           <dl class="spec">
-            <div><dt>autor principal</dt><dd>Matesu</dd></div>
-            <div><dt>minha parte</dt><dd>Versão final</dd></div>
             <div><dt>mcu</dt><dd>ESP32-S3</dd></div>
             <div><dt>dac</dt><dd>PCM5102A · I2S</dd></div>
             <div><dt>backend</dt><dd>Node.js · Express</dd></div>
@@ -173,8 +152,6 @@
           <div class="proj-links">
             <a class="tlink" href="https://github.com/9matesu/minisynth32" target="_blank" rel="noopener">repositório <span class="arw">↗</span></a>
           </div>
-
-          <p class="credit"><b>créditos</b> — Matesu assina o projeto. Fiquei responsável pelo fechamento da versão final.</p>
         </div>
       </article>
     </div>
@@ -186,13 +163,13 @@
       <div class="sec-head reveal">
         <span class="sec-num">03</span>
         <div class="sec-body">
-          <h2 class="sec-title">Como trabalho</h2>
+          <h2 class="sec-title">Notas</h2>
         </div>
-        <span class="sec-note">estudo<br />ferramenta</span>
+        <span class="sec-note">processo<br />referências</span>
       </div>
 
       <div class="sec-intro reveal">
-        <p>Os dois projetos são a mesma curiosidade aplicada de jeitos diferentes: entender o som por dentro, seja abrindo um binário, seja escrevendo firmware. Aprendo construindo — e uso o que aprendo na produção.</p>
+        <p>Um é plugin, o outro é hardware. São projetos separados. O Opcoda lê arquivos onde normalmente não se procura som; o MiniSynth32 existe em cima de uma mesa, com firmware, DAC e interface web.</p>
       </div>
 
       <div class="proj-jump reveal">

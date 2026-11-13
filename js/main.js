@@ -66,29 +66,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── parallax do hero (imagem + geometria) ──
+  // ── parallax, luz e cursor do hero ──
   const hero = document.querySelector('.hero');
   if (hero && !reduceMotion) {
     let raf = null;
     let mx = 0;
     let my = 0;
+    let px = 50;
+    let py = 42;
+    let cx = -100;
+    let cy = -100;
+    let tx = -100;
+    let ty = -100;
 
-    const apply = () => {
+    const render = () => {
+      cx += (tx - cx) * 0.16;
+      cy += (ty - cy) * 0.16;
+
       hero.style.setProperty('--mx', mx.toFixed(2) + 'px');
       hero.style.setProperty('--my', my.toFixed(2) + 'px');
-      raf = null;
+      hero.style.setProperty('--px', px.toFixed(2) + '%');
+      hero.style.setProperty('--py', py.toFixed(2) + '%');
+      hero.style.setProperty('--cx', cx.toFixed(1) + 'px');
+      hero.style.setProperty('--cy', cy.toFixed(1) + 'px');
+
+      raf = Math.abs(tx - cx) > 0.4 || Math.abs(ty - cy) > 0.4
+        ? requestAnimationFrame(render)
+        : null;
     };
 
     hero.addEventListener('mousemove', e => {
-      mx = (e.clientX / window.innerWidth - 0.5) * 26;
-      my = (e.clientY / window.innerHeight - 0.5) * 26;
-      if (!raf) raf = requestAnimationFrame(apply);
+      const rect = hero.getBoundingClientRect();
+      tx = e.clientX - rect.left;
+      ty = e.clientY - rect.top;
+      px = (tx / rect.width) * 100;
+      py = (ty / rect.height) * 100;
+      mx = (tx / rect.width - 0.5) * 30;
+      my = (ty / rect.height - 0.5) * 30;
+      if (!raf) raf = requestAnimationFrame(render);
     });
 
     hero.addEventListener('mouseleave', () => {
       mx = 0;
       my = 0;
-      if (!raf) raf = requestAnimationFrame(apply);
+      px = 50;
+      py = 42;
+      tx = -100;
+      ty = -100;
+      if (!raf) raf = requestAnimationFrame(render);
     });
   }
 
