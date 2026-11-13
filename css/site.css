@@ -10,6 +10,13 @@
       --line-soft:rgba(241,239,233,.07);
       --accent:#6d8aff;
 
+      --light-bg:#f8f8f8;
+      --light-paper:#ffffff;
+      --light-ink:#1a1a1a;
+      --light-muted:#666666;
+      --light-dim:#888888;
+      --light-line:rgba(0,0,0,.1);
+
       --rail:clamp(190px,16vw,240px);
       --wrap:1240px;
       --pad:clamp(20px,4vw,64px);
@@ -19,6 +26,8 @@
       --s6:32px; --s7:48px; --s8:64px; --s9:96px;
 
       --ease:cubic-bezier(.2,.7,.2,1);
+
+      --theme:dark;
     }
 
     /* ───────────────────────────── reset ───────────────────────────── */
@@ -54,6 +63,8 @@
       background:var(--bg);
       border-right:1px solid var(--line);
     }
+    .rail.theme-light{--bg:var(--light-bg);--paper:var(--light-paper);--ink:var(--light-ink);--muted:var(--light-muted);--dim:var(--light-dim);--line:var(--light-line)}
+    .rail.theme-dark{--bg:var(--bg);--paper:var(--paper);--ink:var(--ink);--muted:var(--muted);--dim:var(--dim);--line:var(--line)}
     .rail-brand{
       font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--paper);
     }
@@ -87,8 +98,8 @@
       border-bottom:1px solid var(--line);padding-bottom:3px;
       transition:color .15s,border-color .15s;
     }
-    .tlink:hover{color:var(--accent);border-color:var(--accent)}
-    .tlink:hover .arw{color:var(--accent)}
+    .tlink:hover{color:var(--paper);border-color:var(--paper)}
+    .tlink:hover .arw{color:var(--paper)}
 
     /* ───────────────────────────── home ────────────────────────────── */
     .hero{
@@ -273,9 +284,9 @@
       padding:16px 0;border-bottom:1px solid var(--line-soft);
       font-size:15px;color:var(--ink);transition:color .15s;
     }
-    .contact a:hover{color:var(--accent)}
+    .contact a:hover{color:var(--paper)}
     .contact a .arw{transition:transform .15s}
-    .contact a:hover .arw{transform:translate(2px,-2px);color:var(--accent)}
+    .contact a:hover .arw{transform:translate(2px,-2px);color:var(--paper)}
 
     /* ───────────────────────────── synths ──────────────────────────── */
     .syn-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -348,7 +359,7 @@
     }
     .f-brand{font-size:14px;font-weight:600;color:var(--paper)}
     .f-links{display:flex;flex-wrap:wrap;gap:8px 18px}
-    .f-links a:hover{color:var(--accent)}
+    .f-links a:hover{color:var(--paper)}
 
     /* ───────────────────────────── reveal ──────────────────────────── */
     .reveal{opacity:0;transform:translateY(10px);
